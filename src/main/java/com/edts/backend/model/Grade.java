@@ -1,5 +1,7 @@
 package com.edts.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 
@@ -17,6 +19,7 @@ public class Grade implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(insertable = false, updatable = false)
+	@JsonIgnore
 	private long id;
 
 	@Column(unique = true)

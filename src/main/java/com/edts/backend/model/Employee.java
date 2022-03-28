@@ -33,10 +33,9 @@ public class Employee implements Serializable {
 	@Column(name = "bonus")
 	private BigDecimal bonus;
 
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "grade_id", nullable = false)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	@JsonIgnore
 	private Grade grade;
 	
 	
